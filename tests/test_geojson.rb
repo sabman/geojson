@@ -65,7 +65,7 @@ class GeojsonTest < Test::Unit::TestCase
   end
 
   def test_feature_collection
-    check_geom('{ "type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates":[102.0, 0.5]}, "properties": {"prop0": "value0"}, "id": "toto"}, {"type": "Feature", "geometry": {"type": "LineString", "coordinates": [[102.0, 0.0], [103.0, 1.0], [104.0, 0.0], [105.0, 1.0]]}, "properties": {"prop0": "value0", "prop1": 0.0}}]}',
+    check_geom('{ "type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates":[102.0, 0.5]}, "id": "toto", "properties": {"prop0": "value0"}}, {"type": "Feature", "geometry": {"type": "LineString", "coordinates": [[102.0, 0.0], [103.0, 1.0], [104.0, 0.0], [105.0, 1.0]]}, "properties": {"prop0": "value0", "prop1": 0.0}}]}',
                FeatureCollection.new([
                  Feature.new(Point.from_coordinates([102.0, 0.5]), {"prop0"=>"value0"}, "toto"),
                  Feature.new(LineString.from_coordinates([ [102.0, 0.0], [103.0, 1.0], [104.0, 0.0], [105.0, 1.0] ]), {"prop0"=>"value0", "prop1"=>0.0})
