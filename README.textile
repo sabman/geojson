@@ -1,0 +1,28 @@
+h1. What is GeoJSON?
+
+GeoJSON is a JSON representation of Simple Feature geometries defined by Open Geospatial Consortium (OGC). Simple features is a standard for representing geographic objects. You can read the GeoJSON spec at:  "http://geojson.org/geojson-spec.html":http://geojson.org/geojson-spec.html
+
+h1. Using GeoJSON
+
+h2. Prerequisits
+
+This GeoJSON is an extension to the GeoRuby gem. 
+
+<pre>
+  <code>
+    gem install nofxx-georuby
+    
+    git clone git@github.com:sabman/geojson.git
+    
+    irb
+    require 'geo_ruby'
+    require 'geojson'
+    geojson = '{ "type": "LineString", "coordinates": [ [100.0, 0.0], [101.0, 1.0] ] }'
+    # read geometry
+    geom = Geometry.from_geojson(geojson)
+    # write geometry
+    geom.to_json
+  </code>
+</pre>
+
+You can see the tests for more examples
