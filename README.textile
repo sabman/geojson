@@ -11,8 +11,8 @@ This GeoJSON is an extension to the GeoRuby gem.
 <pre>
   <code>
     gem install nofxx-georuby
-    
     git clone git@github.com:sabman/geojson.git
+    cd geojson
     
     irb
     require 'geo_ruby'
@@ -25,4 +25,4 @@ This GeoJSON is an extension to the GeoRuby gem.
   </code>
 </pre>
 
-You can see the tests for more examples
+You can see the "tests":http://github.com/sabman/geojson/blob/master/tests/test_geojson.rb for more examples 
